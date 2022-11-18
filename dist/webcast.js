@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,10 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Socket = exports.version = void 0;
-exports.version = "1.0.1";
-class Socket {
+export const version = "1.0.1";
+export class Socket {
     constructor({ mediaRecorder, url: rawUrl, info, onError, onOpen, }) {
         const parser = document.createElement("a");
         parser.href = rawUrl;
@@ -53,7 +50,6 @@ class Socket {
         }));
     }
 }
-exports.Socket = Socket;
 if (typeof window !== "undefined") {
     window.Webcast = {
         version: "1.0.0",
